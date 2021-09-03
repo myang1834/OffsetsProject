@@ -20,7 +20,7 @@ function LogInPage ({navigation}){
                     <TouchableOpacity style = {styles.button} onPress={() => navigation.navigate('HomePage')}>
                         <Text style = {styles.buttonText}>Sign In</Text>
                      </TouchableOpacity>
-                     <Text style = {styles.oneLiner}>Don't have an account? - Sign Up</Text>
+                     <Text style = {styles.oneLinerBottom}>Don't have an account? - Sign Up</Text>
 
 
 
@@ -36,7 +36,6 @@ const styles = StyleSheet.create({
       marginTop: 15,
       justifyContent: 'center',
       alignItems: 'center',
-      
     },
        
     title: {
@@ -46,21 +45,23 @@ const styles = StyleSheet.create({
       fontSize: 36,
       textAlign:'center',
       padding: 10,
-      paddingTop: 35
+      paddingTop: 35,
+      paddingBottom: 20
     },
     oneLiner:{
       fontFamily: 'Arial',
       fontStyle: 'normal',
       textAlign:'center',
       fontSize: 15,
-      padding: 10
+      paddingTop: 10,
+      paddingBottom: 30
     },
     input: {
         height: 40,
         margin: 12,
         borderWidth: 1,
         padding: 10,
-        width: 350,
+        width: wp2dp('80%'),
         borderRadius: 10
         
       },
@@ -82,6 +83,14 @@ const styles = StyleSheet.create({
         fontWeight: '700',
         fontSize: 20
 
+    },
+    oneLinerBottom:{
+      fontFamily: 'Arial',
+      fontStyle: 'normal',
+      textAlign:'center',
+      fontSize: 15,
+      paddingTop: 40,
+      paddingBottom: 30
     }
 })
 

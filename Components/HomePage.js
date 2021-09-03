@@ -5,16 +5,44 @@ import {
     heightPercentageToDP as hp2dp,
   } from 'react-native-responsive-screen';
 
+import HomePageBlocks from './HomePageBlocks';
 
-function LogInPage ({navigation}){
+function HomePage ({navigation}){
    
   
         return(
-            <View>
-                <Text>Home Page </Text>
-            </View>
+            <ScrollView>
+                <View style = {styles.container}>
+                    <Text style = {styles.title}>Good Morning, Matt! </Text>
+                    <Text style = {styles.text}>Live more sustainably </Text>
+                    <HomePageBlocks/>
+                </View>
+            </ScrollView>
+            
         )
 
 }
 
-export default LogInPage
+const styles = StyleSheet.create({
+    container: {
+      marginTop: 15,
+      paddingLeft: 5
+    },
+    title: {
+        fontFamily: 'Arial',
+        fontStyle: 'normal',
+        fontWeight: 'bold',
+        fontSize: 28,
+        paddingTop:15,
+        paddingBottom: 10
+      },
+      text: {
+        fontFamily: 'Arial',
+        fontStyle: 'normal',
+        fontSize: 20,
+        paddingBottom: 22
+      },
+
+})
+
+export default HomePage
