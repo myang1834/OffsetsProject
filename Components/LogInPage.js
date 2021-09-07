@@ -1,10 +1,10 @@
 import React from 'react';
-import {TouchableOpacity, Button, ScrollView, Image, StyleSheet, Text, View, TextInput} from 'react-native';
+import {Dimensions, TouchableOpacity, Button, ScrollView, Image, StyleSheet, Text, View, TextInput} from 'react-native';
 import {
     widthPercentageToDP as wp2dp,
     heightPercentageToDP as hp2dp,
   } from 'react-native-responsive-screen';
-
+  const { width, height } = Dimensions.get('window')
 
 function LogInPage ({navigation}){
    
@@ -36,6 +36,8 @@ const styles = StyleSheet.create({
       marginTop: 15,
       justifyContent: 'center',
       alignItems: 'center',
+      flex: 1,
+      flexDirection: 'column',
     },
        
     title: {

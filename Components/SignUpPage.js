@@ -1,9 +1,11 @@
 import { render } from "react-dom"
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {TouchableOpacity, Button, ScrollView, Image, StyleSheet, Text, View } from 'react-native';
+import {Dimensions, TouchableOpacity, Button, ScrollView, Image, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+const { width, height } = Dimensions.get('window')
+
 
 function SignUpPage({navigation}){
    
@@ -41,8 +43,8 @@ const styles = StyleSheet.create({
         padding: 40
     },
       image:{
-        width: 225,
-        height: 225,
+        width: width*.65,
+        height: height*.3,
         padding: 20
     },
     title: {
@@ -73,8 +75,8 @@ const styles = StyleSheet.create({
         elevation: 3,
         backgroundColor: '#84C6AE',
         borderRadius: 38,
-        width: 320,
-        height: 63,
+        width: width*.8,
+        height: height*.08,
     },
     buttonText:{
         fontFamily: 'Arial',
