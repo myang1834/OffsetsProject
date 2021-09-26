@@ -14,10 +14,14 @@ class HomePageBlocks extends React.Component{
         return(
             <View style = {this.props.style}>
             
-                <Text style = {styles.block}>{this.props.name}</Text>
-                <Text style = {styles.text}>$452.24</Text>
-                <TouchableOpacity style = {styles.button}>
-                    <Text style = {styles.buttonText}>See More</Text>
+                <Text style = {this.props.textStyle}>{this.props.name}</Text>
+                <View style = {this.props.extraTextView} >
+                    <Text style = {this.props.numsStyle}>{this.props.nums}</Text>
+                    <Text style = {this.props.extraTextStyle}>{this.props.extraText} </Text>
+                </View> 
+
+                <TouchableOpacity style = {this.props.buttonStyle}>
+                    <Text style = {this.props.buttonTextStyle}>See More</Text>
                 </TouchableOpacity>
             </View>
         )
@@ -26,49 +30,5 @@ class HomePageBlocks extends React.Component{
     
 }
 
-
-
-const styles = StyleSheet.create({ 
-    text:{
-        textAlign: "center",
-        fontSize: 38,
-        fontFamily: 'Arial',
-        fontWeight: '700',
-        paddingTop: 15,
-        color: '#FFECCC'
-        
-    },
-    block: {  
-        
-        textAlign: "left",
-        fontSize: 20,
-        fontFamily: 'Arial',
-        fontWeight: '700',
-        padding: 12,
-        color: '#FFECCC'
-    },
-    button:{  
-        alignItems: 'center',
-        justifyContent: 'center',
-        elevation: 10,
-        backgroundColor: '#524F53',
-        borderRadius: 25,
-        width: width*.2,
-        height: height*.035,
-        position: 'absolute',
-        bottom: 25,
-        left: width*.12
-        
-    },
-    buttonText:{
-        
-        fontFamily: 'Arial',
-        color: 'white',
-        fontWeight: '700',
-        fontSize: 12,
-
-    }
-
-})
 
 export default HomePageBlocks

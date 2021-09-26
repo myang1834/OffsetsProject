@@ -16,14 +16,21 @@ class ScrollingHorizontalBlocks extends React.Component{
                    
 
                     <View style = {styles.container}>
-                        <Text>{this.props.projects[0]}</Text>
+                        <View style={styles.overlay} />
+                        <Image style = {styles.image} source={require('../assets/carboncure-logo.png')} />
+                        
                     </View>
-                    <View style = {styles.container}>
-                        <Text>{this.props.projects[1]}</Text>
+                   
+                    <View style = {styles.container} >
+                        <View style={styles.overlayCharm} opacity={0.65}/>
+                        <Image style = {styles.charmImage} source={require('../assets/CharmIndustrial.png')} />
                     </View>
-                    <View style = {styles.container}>
-                        <Text>{this.props.projects[2]}</Text>
+                   
+                    <View style = {styles.container} >
+                        <View style={styles.overlayVesta} />
+                        <Image style = {styles.image} source={require('../assets/project-vesta.png')} />
                     </View>
+
                 </View>
 
             </ScrollView>
@@ -36,29 +43,56 @@ class ScrollingHorizontalBlocks extends React.Component{
 
 
 const styles = StyleSheet.create({
+    image:{
+        width: width*.45,
+        height: height*.2,
+        
+    },
+    charmImage:{
+        width: width*.32,
+        height: height*.10,
+        
+
+    },
     container: {
       marginTop: 15,
-      padding: 5,
-      width: width * .40,
+      width: width * .45,
       height: height * .15,
-      borderWidth: 1,
       borderRadius: 10,
-      marginLeft:5
+      marginLeft:10,
+      marginRight:8,
+      justifyContent: 'center',
+      alignItems: 'center',
+
           
     },
 
       overallView: {
         flexDirection: 'row',
-        padding: 10,
-        justifyContent:'space-between'
+        justifyContent:'space-between',
+        paddingBottom:15
       },
-      blocks:{
-          padding: 15
+      overlay: {
+        ...StyleSheet.absoluteFillObject,
+        backgroundColor: '#FFE5C0',
+        borderRadius: 9,
+        justifyContent: 'center',
+        alignItems: 'center',
       },
-      text:{
-          padding: 10
+      overlayCharm:{
+        ...StyleSheet.absoluteFillObject,
+        backgroundColor: '#FF741F',
+        borderRadius: 9,
+        justifyContent: 'center',
+        alignItems: 'center',     
+      },
+      overlayVesta:{
+        ...StyleSheet.absoluteFillObject,
+        backgroundColor: '#AFDBC5',
+        borderRadius: 9,
+        justifyContent: 'center',
+        alignItems: 'center',            
       }
-
     
 })
 

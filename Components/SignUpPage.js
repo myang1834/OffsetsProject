@@ -10,7 +10,7 @@ const { width, height } = Dimensions.get('window')
 function SignUpPage({navigation}){
    
     return(
-        <ScrollView>
+        <ScrollView style = {{backgroundColor: '#FFFFFF'}}>
             <View style = {styles.container} >
                 <Text style = {styles.logo} >Insert Logo</Text>
 

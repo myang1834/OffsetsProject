@@ -15,40 +15,31 @@ const learnMore = ['What are carbon offsets?', "How do round ups work?", "Sustai
 const { width, height } = Dimensions.get('window')
 
 function HomePage ({navigation}){
-   
   
-        return(
-            <ScrollView style = {{backgroundColor: '#FFFFFF'}}>
-                <View style = {styles.container}>
-                    <Text style = {styles.title}>Good Morning, Matt! </Text>
-                    <Text style = {styles.text}>Live more sustainably </Text>
-                    </View>
+  return(
+    <ScrollView style = {{backgroundColor: '#FFFFFF'}}>
+      
+      <View style = {styles.container}>
+         <Text style = {styles.title}>Good Morning, Matt! </Text>
+         <Text style = {styles.text}>Live more sustainably </Text>
+      </View>
 
-                    <View style = {styles.boxes}>
-                    <TopBar></TopBar>
+      <View style = {styles.boxes}>
+         <TopBar></TopBar>
 
-                    <HomePageBlocks name = 'Total Contributions' style = {styles.homePageBlockLeft} textStyle = {styles.leftBlockText}/>
-                    <HomePageBlocks name = {'Total ' + '\n' + 'Carbon Offset'} style = {styles.homePageBlockRight} textStyle = {styles.rightBlockText}/>
-                    </View>
-                    <Text style = {styles.boxTitles}>My Projects</Text>
-                    <ScrollingHorizontalBlocks projects = {projectNames}>
+         <HomePageBlocks name = 'Total Contributions' nums = "$452.24" style = {styles.homePageBlockLeft} textStyle = {styles.leftBlockText} numsStyle = {styles.leftNums} buttonStyle = {styles.leftButton} buttonTextStyle = {styles.leftButtonText}/>
+         <HomePageBlocks name = {'Total ' + '\n' + 'Carbon Offset'} nums = "34.5" style = {styles.homePageBlockRight} textStyle = {styles.rightBlockText} numsStyle = {styles.rightNums} buttonStyle = {styles.rightButton} buttonTextStyle = {styles.rightButtonText} extraText = {'Metric' + '\n' + 'Tonnes'} extraTextStyle = {styles.extraTextStyle}extraTextView = {styles.extraTextView}/>
+      </View>
+        
+        <Text style = {styles.boxTitles}>My Projects</Text>
+        
+        <ScrollingHorizontalBlocks projects = {projectNames}> </ScrollingHorizontalBlocks>
 
-                    </ScrollingHorizontalBlocks>
-
-                    <Text style = {styles.boxTitles}>Learn More</Text>
-
-
-                    <ScrollingHorizontalBlocks projects = {learnMore}>
-
-                    </ScrollingHorizontalBlocks>
-                {/*   <ScrollView style = {styles.scrollview} horizontal = {true}>
-                      <ScrollingHorizontalBlocks name = "carbon cure"></ScrollingHorizontalBlocks>
-                      <ScrollingHorizontalBlocks name = "Charm Industrial"></ScrollingHorizontalBlocks>
-                      <ScrollingHorizontalBlocks name = "Project Vesta"></ScrollingHorizontalBlocks>
-
-                    </ScrollView>*/}
-
-            </ScrollView>
+        <Text style = {styles.boxTitles}>Learn More</Text>
+      
+       <ScrollingHorizontalBlocks projects = {learnMore}> </ScrollingHorizontalBlocks>
+    
+    </ScrollView>
             
         )
 
@@ -103,6 +94,43 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: '#4592D0'
       },
+      leftBlockText:{
+        textAlign: "left",
+        fontSize: 20,
+        fontFamily: 'Arial',
+        fontWeight: '700',
+        padding: 12,
+        color: '#FFECCC'
+               
+      },
+      leftNums:{
+        textAlign: "center",
+        fontSize: 44,
+        fontFamily: 'Arial',
+        fontWeight: '700',
+        paddingTop: 15,
+        color: '#FFECCC'
+      },
+      leftButton:{
+        alignItems: 'center',
+        justifyContent: 'center',
+        elevation: 10,
+        backgroundColor: '#EBEAEC',
+        borderRadius: 25,
+        width: width*.2,
+        height: height*.035,
+        position: 'absolute',
+        bottom: 25,
+        left: width*.12
+
+      },
+      leftButtonText:{
+        fontFamily: 'Arial',
+        color: '#524F53',
+        fontWeight: '700',
+        fontSize: 12,
+
+      },
       homePageBlockRight: {
         marginTop: 15,
         paddingLeft: 5,
@@ -111,23 +139,57 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: '#FFC97E'
       },
-      leftBlockText:{
-        textAlign: "left",
-        fontSize: 18,
-        fontFamily: 'Arial',
-        fontWeight: '700',
-        padding: 12,
-        color: '#FFECCC'
-          
-      }, 
+      
       rightBlockText:{
         textAlign: "left",
-        fontSize: 18,
+        fontSize: 20,
         fontFamily: 'Arial',
         fontWeight: '700',
         padding: 12,
         color: '#524F53'
+      },
+      rightNums:{
+        textAlign: "center",
+        fontSize: 44,
+        fontFamily: 'Arial',
+        fontWeight: '700',
+        paddingTop: 15,
+        color: '#524F53',
+        paddingLeft: 6
+      },
+      rightButton:{
+        alignItems: 'center',
+        justifyContent: 'center',
+        elevation: 10,
+        backgroundColor: '#524F53',
+        borderRadius: 25,
+        width: width*.2,
+        height: height*.035,
+        position: 'absolute',
+        bottom: 25,
+        left: width*.12
+      },
+      rightButtonText:{
+        fontFamily: 'Arial',
+        color: 'white',
+        fontWeight: '700',
+        fontSize: 12,
+
+      },
+      extraTextView:{ 
+        flexDirection: 'row',
+      },
+      extraTextStyle:{
+        textAlign: "left",
+        fontSize: 16,
+        fontFamily: 'Arial',
+        fontWeight: '700',
+        padding: 12,
+        color: '#524F53',
+        paddingTop: 22
+        
       }
+     
       
      
 })

@@ -10,7 +10,7 @@ function LogInPage ({navigation}){
    
   
         return(
-            <ScrollView>
+            <ScrollView style = {{backgroundColor: '#FFFFFF'}}>
                 <View style={styles.container}>
                     <Text style = {styles.title}>Welcome Back!</Text>
                     <Text style = {styles.oneLiner}>Sign in to continue</Text>
