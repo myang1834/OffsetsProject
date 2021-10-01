@@ -14,22 +14,39 @@ class ScrollingHorizontalBlocks extends React.Component{
             <ScrollView style = {styles.scrollview} horizontal = {true}>
                 <View style = {styles.overallView}>
                    
+                    <View>
+                      <View style = {styles.container}>
+                          <View style={styles.overlay} />
+                          <Image style = {styles.image} source={require('../assets/carboncure-logo.png')} />
+                      </View>
+                      <Text style = {styles.scrollingBlockTitle}>{this.props.projects[0]}</Text> 
+                      <Text style = {styles.scrollingBlockText}>eh</Text> 
 
-                    <View style = {styles.container}>
-                        <View style={styles.overlay} />
-                        <Image style = {styles.image} source={require('../assets/carboncure-logo.png')} />
-                        
+                    </View>
+
+
+                   <View>
+                      <View style = {styles.container} >
+                          <View style={styles.overlayCharm} opacity={0.65}/>
+                          <Image style = {styles.charmImage} source={require('../assets/CharmIndustrial.png')} />
+                      </View>
+                      <Text style = {styles.scrollingBlockTitle}>{this.props.projects[1]}</Text> 
+                      <Text style = {styles.scrollingBlockText}>hello</Text> 
+
+
                     </View>
                    
-                    <View style = {styles.container} >
-                        <View style={styles.overlayCharm} opacity={0.65}/>
-                        <Image style = {styles.charmImage} source={require('../assets/CharmIndustrial.png')} />
+                    <View>
+                      <View style = {styles.container} >
+                          <View style={styles.overlayVesta} />
+                          <Image style = {styles.image} source={require('../assets/project-vesta.png')} />
+                      </View>
+                      <Text style = {styles.scrollingBlockTitle}>{this.props.projects[2]}</Text> 
+                      <Text style = {styles.scrollingBlockText}>ok</Text> 
+
+
                     </View>
-                   
-                    <View style = {styles.container} >
-                        <View style={styles.overlayVesta} />
-                        <Image style = {styles.image} source={require('../assets/project-vesta.png')} />
-                    </View>
+
 
                 </View>
 
@@ -66,13 +83,32 @@ const styles = StyleSheet.create({
 
           
     },
+    scrollingBlockTitle:{
+      fontFamily: 'Arial',
+      fontStyle: 'normal',
+      fontSize: 20,
+      marginLeft: 10,
+      fontWeight: '700',
+      paddingTop: 10
+    },
+    scrollingBlockText:{
+      fontFamily: 'Arial',
+      fontStyle: 'normal',
+      fontSize: 14,
+      marginLeft: 10,
+      fontWeight: 'normal',
+      paddingTop: 5,
+      color: '#A1A4B2'
 
-      overallView: {
+      
+
+    },
+    overallView: {
         flexDirection: 'row',
         justifyContent:'space-between',
         paddingBottom:15
-      },
-      overlay: {
+    },
+    overlay: {
         ...StyleSheet.absoluteFillObject,
         backgroundColor: '#FFE5C0',
         borderRadius: 9,

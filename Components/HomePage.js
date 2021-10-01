@@ -10,7 +10,12 @@ import TopBar from './TopBar_HomePage';
 import ScrollingHorizontalBlocks from './ScrollingHorizontal_HomePage';
 
 const projectNames = ["Carbon Cure","Charm Industrial","Project Vesta"]
-const learnMore = ['What are carbon offsets?', "How do round ups work?", "Sustainable Investing 101"]
+const learnMore = ['What are carbon ' + '\n' +'offsets?', 'How do round ups ' + '\n' + 'work?', 'Sustainable ' + '\n' + 'Investing 101']
+const pricesTon = ["$45 per metric ton", '$23 per metric ton', '$27 per metric ton']
+const price = 'this is a prop'
+
+let offsetProject = {projectName: 'Carbon Cure', pricePerTonnes: '$45 per ton'}
+
 
 const { width, height } = Dimensions.get('window')
 
@@ -28,16 +33,18 @@ function HomePage ({navigation}){
          <TopBar></TopBar>
 
          <HomePageBlocks name = 'Total Contributions' nums = "$452.24" style = {styles.homePageBlockLeft} textStyle = {styles.leftBlockText} numsStyle = {styles.leftNums} buttonStyle = {styles.leftButton} buttonTextStyle = {styles.leftButtonText}/>
-         <HomePageBlocks name = {'Total ' + '\n' + 'Carbon Offset'} nums = "34.5" style = {styles.homePageBlockRight} textStyle = {styles.rightBlockText} numsStyle = {styles.rightNums} buttonStyle = {styles.rightButton} buttonTextStyle = {styles.rightButtonText} extraText = {'Metric' + '\n' + 'Tonnes'} extraTextStyle = {styles.extraTextStyle}extraTextView = {styles.extraTextView}/>
+         <HomePageBlocks name = {'Total ' + '\n' + 'Carbon Offset'} nums = "34.5" style = {styles.homePageBlockRight} textStyle = {styles.rightBlockText} numsStyle = {styles.rightNums} buttonStyle = {styles.rightButton} buttonTextStyle = {styles.rightButtonText} extraText = {'Metric' + '\n' + 'Tonnes'} extraTextStyle = {styles.extraTextStyle} extraTextView = {styles.extraTextView}/>
       </View>
         
         <Text style = {styles.boxTitles}>My Projects</Text>
+
+        {/*Haven't figured out why the prices prop isn't passing, may not be able to pass two arrays? */}
         
-        <ScrollingHorizontalBlocks projects = {projectNames}> </ScrollingHorizontalBlocks>
+        <ScrollingHorizontalBlocks projects = {projectNames} prices = {pricesTon} > </ScrollingHorizontalBlocks>
 
         <Text style = {styles.boxTitles}>Learn More</Text>
       
-       <ScrollingHorizontalBlocks projects = {learnMore}> </ScrollingHorizontalBlocks>
+        <ScrollingHorizontalBlocks projects = {learnMore}> </ScrollingHorizontalBlocks>
     
     </ScrollView>
             
@@ -80,7 +87,8 @@ const styles = StyleSheet.create({
         fontFamily: 'Arial',
         fontStyle: 'normal',
         fontSize: 24,
-        paddingBottom: 10,
+        paddingTop: 15,
+       
         paddingLeft: 10,
         fontWeight: '800'
       },
