@@ -12,6 +12,8 @@ import ScrollingHorizontalBlocks from './ScrollingHorizontal_HomePage';
 const projectNames = ["Carbon Cure","Charm Industrial","Project Vesta"]
 const learnMore = ['What are carbon ' + '\n' +'offsets?', 'How do round ups ' + '\n' + 'work?', 'Sustainable ' + '\n' + 'Investing 101']
 const pricesTon = ["$45 per metric ton", '$23 per metric ton', '$27 per metric ton']
+const projectLogos = [require("../assets/carboncure-logo.png"), require('../assets/CharmIndustrial.png'),require('../assets/project-vesta.png')]
+const learnMoreLogos = [require("../assets/Chest.png"), require('../assets/offsetsexplain.png'),require('../assets/sustInvest.png')]
 const price = 'this is a prop'
 
 let offsetProject = {projectName: 'Carbon Cure', pricePerTonnes: '$45 per ton'}
@@ -40,11 +42,11 @@ function HomePage ({navigation}){
 
         {/*Haven't figured out why the prices prop isn't passing, may not be able to pass two arrays? */}
         
-        <ScrollingHorizontalBlocks projects = {projectNames} prices = {pricesTon} > </ScrollingHorizontalBlocks>
+        <ScrollingHorizontalBlocks projects = {projectNames} pricesTon = {pricesTon} logos = {projectLogos} > </ScrollingHorizontalBlocks>
 
         <Text style = {styles.boxTitles}>Learn More</Text>
       
-        <ScrollingHorizontalBlocks projects = {learnMore}> </ScrollingHorizontalBlocks>
+        <ScrollingHorizontalBlocks projects = {learnMore} pricesTon = {[]} logos = {learnMoreLogos}> </ScrollingHorizontalBlocks>
     
     </ScrollView>
             

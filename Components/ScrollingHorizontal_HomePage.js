@@ -7,8 +7,10 @@ import {
 import HomePageBlocks from './HomePageBlocks';
 
 const { width, height } = Dimensions.get('window')
+const img = '../assets/CharmIndustrial.png'
 
 class ScrollingHorizontalBlocks extends React.Component{
+     imgs = this.props.logos[0]
     render(){
         return(
             <ScrollView style = {styles.scrollview} horizontal = {true}>
@@ -17,10 +19,11 @@ class ScrollingHorizontalBlocks extends React.Component{
                     <View>
                       <View style = {styles.container}>
                           <View style={styles.overlay} />
-                          <Image style = {styles.image} source={require('../assets/carboncure-logo.png')} />
+                          <Image style = {styles.image} source={this.props.logos[0]} />
+                         
                       </View>
                       <Text style = {styles.scrollingBlockTitle}>{this.props.projects[0]}</Text> 
-                      <Text style = {styles.scrollingBlockText}>eh</Text> 
+                      <Text style = {styles.scrollingBlockText}>{this.props.pricesTon[0]}</Text> 
 
                     </View>
 
@@ -28,10 +31,10 @@ class ScrollingHorizontalBlocks extends React.Component{
                    <View>
                       <View style = {styles.container} >
                           <View style={styles.overlayCharm} opacity={0.65}/>
-                          <Image style = {styles.charmImage} source={require('../assets/CharmIndustrial.png')} />
+                          <Image style = {styles.charmImage} source={this.props.logos[1]} />
                       </View>
                       <Text style = {styles.scrollingBlockTitle}>{this.props.projects[1]}</Text> 
-                      <Text style = {styles.scrollingBlockText}>hello</Text> 
+                      <Text style = {styles.scrollingBlockText}>{this.props.pricesTon[1]}</Text> 
 
 
                     </View>
@@ -39,10 +42,10 @@ class ScrollingHorizontalBlocks extends React.Component{
                     <View>
                       <View style = {styles.container} >
                           <View style={styles.overlayVesta} />
-                          <Image style = {styles.image} source={require('../assets/project-vesta.png')} />
+                          <Image style = {styles.image} source={this.props.logos[2]} />
                       </View>
                       <Text style = {styles.scrollingBlockTitle}>{this.props.projects[2]}</Text> 
-                      <Text style = {styles.scrollingBlockText}>ok</Text> 
+                      <Text style = {styles.scrollingBlockText}>{this.props.pricesTon[2]}</Text> 
 
 
                     </View>
