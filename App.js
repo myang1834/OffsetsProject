@@ -11,6 +11,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 export default function App() {
 
+  const Patch = require('@patch-technology/patch').default;
+  const patch = Patch('key_test_61199ab1c0625cd3cc8df69b10eaf2b9');
+
   let [fontsLoaded] = useFonts({
     Inter_900Black,
   });
