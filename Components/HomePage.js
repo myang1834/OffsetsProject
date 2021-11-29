@@ -56,8 +56,8 @@ function HomePage ({navigation}){
 
 const styles = StyleSheet.create({
     container: {
-      marginTop: 15,
-      paddingLeft: 5,
+      marginTop: height*.02,
+
       textAlign: 'center'
 
     },
@@ -65,72 +65,72 @@ const styles = StyleSheet.create({
         fontFamily: 'Arial',
         fontStyle: 'normal',
         fontWeight: 'bold',
-        fontSize: 28,
-        paddingTop:15,
-        paddingLeft:10,
-        paddingBottom: 5
+        paddingLeft:width*.03,
+
+        fontSize: height*.034,
+        paddingTop:height*.02,
+        paddingBottom: height*.008
       },
       text: {
         fontFamily: 'Arial',
         fontStyle: 'normal',
-        fontSize: 24,
-        paddingBottom: 15,
-        paddingLeft: 10,
+        fontSize: height*.025,
+        paddingBottom: height*.02,
+        paddingLeft: width*.03,
         fontWeight: '800',
         color: '#A1A4B2'
       },
       boxes:{
         flexDirection: 'row',
         flexWrap: 'wrap',
-        padding: 10,
+        padding: height*.012,
         justifyContent:'space-between'
       },
       boxTitles:{
         fontFamily: 'Arial',
         fontStyle: 'normal',
-        fontSize: 24,
-        paddingTop: 15,
+        fontSize: height*.028,
+        paddingTop: height*.02,
        
-        paddingLeft: 10,
+        paddingLeft: width*.03,
         fontWeight: '800'
       },
       homePageBlockLeft: {
         flexDirection: 'column',
         flex: 0,
-        marginTop: 15,
-        paddingLeft: 5,
+        marginTop: height*.02,
+        paddingLeft: width*.01,
         width: width * .45,
         height: height * .25,
-        borderRadius: 10,
+        borderRadius: width*.03,
         backgroundColor: '#4592D0'
       },
       leftBlockText:{
         textAlign: "left",
-        fontSize: 20,
+        fontSize: width*.055,
         fontFamily: 'Arial',
         fontWeight: '700',
-        padding: 12,
+        padding: height*.015,
         color: '#FFECCC'
                
       },
       leftNums:{
         textAlign: "center",
-        fontSize: 44,
+        fontSize: width*.1,
         fontFamily: 'Arial',
         fontWeight: '700',
-        paddingTop: 15,
+        paddingTop: height*.01,
         color: '#FFECCC'
       },
       leftButton:{
         alignItems: 'center',
         justifyContent: 'center',
-        elevation: 10,
         backgroundColor: '#EBEAEC',
         borderRadius: 25,
         width: width*.2,
         height: height*.035,
         position: 'absolute',
-        bottom: 25,
+        bottom: height*.035,
         left: width*.12
 
       },
@@ -142,41 +142,40 @@ const styles = StyleSheet.create({
 
       },
       homePageBlockRight: {
-        marginTop: 15,
-        paddingLeft: 5,
+        marginTop: height*.02,
+        paddingLeft: width*.01,
         width: width * .45,
         height: height * .25,
-        borderRadius: 10,
+        borderRadius: width*.03,
         backgroundColor: '#FFC97E'
       },
       
       rightBlockText:{
         textAlign: "left",
-        fontSize: 20,
+        fontSize: width*.055,
         fontFamily: 'Arial',
         fontWeight: '700',
-        padding: 12,
+        padding: height*.015,
         color: '#524F53'
       },
       rightNums:{
         textAlign: "center",
-        fontSize: 44,
+        fontSize: width*.1,
         fontFamily: 'Arial',
         fontWeight: '700',
-        paddingTop: 15,
+        paddingTop: height*.01,
         color: '#524F53',
         paddingLeft: 6
       },
       rightButton:{
         alignItems: 'center',
         justifyContent: 'center',
-        elevation: 10,
         backgroundColor: '#524F53',
         borderRadius: 25,
         width: width*.2,
         height: height*.035,
         position: 'absolute',
-        bottom: 25,
+        bottom: height*.035,
         left: width*.12
       },
       rightButtonText:{
@@ -191,12 +190,12 @@ const styles = StyleSheet.create({
       },
       extraTextStyle:{
         textAlign: "left",
-        fontSize: 16,
+        fontSize: height*.02,
         fontFamily: 'Arial',
         fontWeight: '700',
-        padding: 12,
+        padding: width*.03,
         color: '#524F53',
-        paddingTop: 22
+        paddingTop: height*.015
         
       }
      

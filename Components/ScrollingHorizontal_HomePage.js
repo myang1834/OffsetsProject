@@ -64,7 +64,7 @@ class ScrollingHorizontalBlocks extends React.Component{
 
 const styles = StyleSheet.create({
     image:{
-        width: width*.45,
+        width: width*.5,
         height: height*.2,
         
     },
